@@ -1,14 +1,14 @@
 import './ranger.style.css'
 
-const rangeMin = document.getElementById("range-min") as HTMLInputElement;
-const rangeMax = document.getElementById("range-max") as HTMLInputElement;
-const sliderRange = document.getElementById("ranger-range") as HTMLDivElement;
-const minValueOutput = document.getElementById("min-value") as HTMLParagraphElement;
-const maxValueOutput = document.getElementById("max-value") as HTMLParagraphElement;
+const rangeMin = document.getElementById("range-min");
+const rangeMax = document.getElementById("range-max");
+const sliderRange = document.getElementById("ranger-range");
+const minValueOutput = document.getElementById("min-value");
+const maxValueOutput = document.getElementById("max-value");
 const rangeMinLimit = parseInt(rangeMin.min);
 const rangeMaxLimit = parseInt(rangeMax.max);
 
-function updateSlider(event: any) {
+function updateSlider(event) {
 	const minValue = parseInt(rangeMin.value);
 	const maxValue = parseInt(rangeMax.value);
 

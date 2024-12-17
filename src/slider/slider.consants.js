@@ -1,6 +1,4 @@
-import { Slide } from './slider.interfaces';
-
-export const slides: Slide[] = [
+export const slides = [
 	{ title: 'Слайд 1' },
 	{ title: 'Слайд 2' },
 	{ title: 'Слайд 3' },

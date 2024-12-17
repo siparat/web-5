@@ -1,7 +1,7 @@
 import './scaler.style.css'
 
-const img = document.querySelector('.scaler__image') as HTMLImageElement;
-const preview = document.querySelector(".scaler__preview") as HTMLDivElement;
+const img = document.querySelector('.scaler__image');
+const preview = document.querySelector(".scaler__preview");
 
 const x = preview.offsetWidth / 100;
 const y = preview.offsetHeight / 100;

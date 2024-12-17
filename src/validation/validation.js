@@ -3,8 +3,8 @@ import './validation.style.css'
 const validationItems = document.querySelectorAll('[data-validation]')
 
 const validations = {
-	email: (email: string): boolean => email.includes('@'),
-	password: (password: string): boolean => {
+	email: (email) => email.includes('@'),
+	password: (password) => {
 		if (password.length < 8) {
 			return false;
 		}
@@ -15,11 +15,11 @@ const validations = {
 	}
 }
 
-const onInput = (e: Event) => {
-	const item = e.currentTarget as HTMLInputElement;
-	const type = item.getAttribute('data-validation') as keyof typeof validations;
-	const input = item.querySelector('input') as HTMLInputElement;
-	const messageItem = item.querySelector('p') as HTMLParagraphElement;
+const onInput = (e) => {
+	const item = e.currentTarget;
+	const type = item.getAttribute('data-validation');
+	const input = item.querySelector('input');
+	const messageItem = item.querySelector('p');
 
 	const isValid = validations[type](input.value);
 	if (!isValid) {
