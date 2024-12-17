@@ -1,0 +1,26 @@
+.output {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.ranger-container {
+	position: relative;
+	width: 400px;
+	margin: 20px;
+}
+
+.ranger__slider {
+	width: 100%;
+	height: 35px;
+	background: #77b97f;
+	border-radius: 25px;
+	position: relative;
+}
+
+.ranger-range {
+	position: absolute;
+	height: 100%;
+	background: #ae8d63;
+	border-radius: 5px;
+}

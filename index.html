@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Vite + TS</title>
+</head>
+
+<body>
+	<div class="slider">
+		<button class="slider__button" data-direction="left"></button>
+		<button class="slider__button" data-direction="right"></button>
+	</div>
+	<div class="tabs">
+		<header class="tabs__header">
+			<button data-tabs-button="tab1" class="tabs__button tabs__button_active">Таб 1</button>
+			<button data-tabs-button="tab2" class="tabs__button">Таб 2</button>
+			<button data-tabs-button="tab3" class="tabs__button">Таб 3</button>
+		</header>
+		<section class="tabs__body">
+			<div data-tabs-content="tab1" class="tabs__content tabs__content_active">
+				<div class="tabs__content-text">Таб 1</div>
+				<div class="tabs__content-image">image</div>
+			</div>
+			<div data-tabs-content="tab2" class="tabs__content">
+				<div class="tabs__content-text">Таб 2</div>
+				<div class="tabs__content-image">image</div>
+			</div>
+			<div data-tabs-content="tab3" class="tabs__content">
+				<div class="tabs__content-text">Таб 3</div>
+				<div class="tabs__content-image">image</div>
+			</div>
+		</section>
+	</div>
+	<div class="ranger">
+		<div class="ranger-container">
+			<div class="ranger__slider">
+				<div id="ranger-range" class="ranger-range" style="left: 20%; width: 60%;"></div>
+				<input type="range" id="range-min" min="0" max="100" value="20" step="1">
+				<input type="range" id="range-max" min="0" max="100" value="80" step="1">
+			</div>
+			<div class="output">
+				<p>От: <span id="min-value">20</span></p>
+				<p>До: <span id="max-value">80</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="scaler">
+		<img class="scaler__image"
+			src="https://avatars.mds.yandex.net/i?id=b8ae891597d18096664c198c966daf68_l-10414886-images-thumbs&n=13" />
+		<div class="scaler__preview"></div>
+	</div>
+	<div data-modal="modal" class="modal">
+		<button data-modal="open" class="modal__button">Открыть</button>
+		<div data-modal="popup" class="modal__content">
+			<div class="modal__content-header">
+				<button data-modal="close" class="modal__close-btn">Закрыть</button>
+			</div>
+			<section class="modal__content-body">
+				Контент
+			</section>
+		</div>
+	</div>
+	<div class="accordion">
+		<div class="accordion__tab">
+			<input checked class="accordion__radio" type="radio" id="rd1" name="rd">
+			<label class="accordion__tab-label" for="rd1">Item 1</label>
+			<div class="accordion__tab-content">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+			</div>
+		</div>
+		<div class="accordion__tab">
+			<input class="accordion__radio" type="radio" id="rd2" name="rd">
+			<label class="accordion__tab-label" for="rd2">Item 2</label>
+			<div class="accordion__tab-content">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+			</div>
+		</div>
+		<div class="accordion__tab">
+			<input class="accordion__radio" type="radio" id="rd3" name="rd">
+			<label class="accordion__tab-label" for="rd3">Item 3</label>
+			<div class="accordion__tab-content">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+			</div>
+		</div>
+	</div>
+	<div class="menu">
+		<header class="menu__header">
+		</header>
+		<div class="menu__wrapper">
+			<div class="menu__item">
+				<p class="menu__item-text">1</p>
+				<div class="menu__wrapper">
+					<div class="menu__item">
+						<p class="menu__item-text">1</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">2</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">3</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">4</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<p class="menu__item-text">2</p>
+				<div class="menu__wrapper">
+					<div class="menu__item">
+						<p class="menu__item-text">1</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">2</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">3</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">4</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<p class="menu__item-text">3</p>
+				<div class="menu__wrapper">
+					<div class="menu__item">
+						<p class="menu__item-text">1</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">2</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">3</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">4</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu__item">
+				<p class="menu__item-text">4</p>
+				<div class="menu__wrapper">
+					<div class="menu__item">
+						<p class="menu__item-text">1</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">2</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">3</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<p class="menu__item-text">4</p>
+						<div class="menu__wrapper">
+							<div class="menu__item">
+								<p class="menu__item-text">2</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">3</p>
+							</div>
+							<div class="menu__item">
+								<p class="menu__item-text">4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="validation">
+		<h3 class="validation__title">Callback from with validation</h3>
+
+		<div data-validation="email" class="validation__item">
+			<input placeholder="email" class="validation__input" type="text">
+			<p class="validation__message"></p>
+		</div>
+		<div data-validation="password" class="validation__item">
+			<input placeholder="password" class="validation__input" type="password">
+			<p class="validation__message"></p>
+		</div>
+	</div>
+
+	<script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

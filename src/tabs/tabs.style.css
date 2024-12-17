@@ -1,0 +1,36 @@
+.tabs__button {
+	padding: 10px 20px;
+    border-radius: 20px 20px 0 0;
+    font-size: 16px;
+	background: #beb7b6;
+	color: #7c7576;
+}
+
+.tabs__button_active {
+	background: #77b97f;
+	color: #fff;
+}
+
+.tabs__header {
+	display: flex;
+}
+
+.tabs__content {
+	display: none;
+	gap: 20px;
+}
+
+.tabs__body {
+	background: #77b97f;
+    max-width: max-content;
+    padding: 40px 25px;
+}
+
+.tabs__content_active {
+	display: flex;
+}
+
+.tabs__content > div {
+    background: #fff;
+    padding: 100px;
+}

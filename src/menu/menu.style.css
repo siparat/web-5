@@ -1,0 +1,36 @@
+.menu__header {
+	background: #ae8d63;
+    width: 100%;
+    padding-block: 30px;
+}
+
+.menu {
+	position: relative;
+}
+
+.menu__wrapper {
+	background: #fff;
+    padding: 15px 20px 30px;
+	display: none;
+	position: absolute;
+}
+
+.menu__wrapper:hover, .menu__item:hover > .menu__wrapper, .menu__header:hover ~ .menu__wrapper, .menu__item:hover > .menu__wrapper {
+	display: inline-block;
+}
+
+.menu__item {
+	width: 150px;
+    color: #ae8d63;
+    font-weight: 700;
+    padding-block: 10px;
+    text-align: center;
+    border-bottom: 5px solid #ae8d63;
+	position: relative;
+}
+
+.menu__item > .menu__wrapper {
+	position: absolute;
+	top: -15px;
+    left: 100%;
+}
